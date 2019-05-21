@@ -1,0 +1,1 @@
+angular.module("SmartHome",["ngRoute","ngWebSocket"]);

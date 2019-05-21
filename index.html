@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="SmartHome">
+<head>
+    <meta charset="UTF-8">
+    <title>SmartHome</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-route/angular-route.min.js"></script>
+    <script src="node_modules/angular-websocket/dist/angular-websocket.min.js"></script>
+    <script src="app.js"></script>
+    <script src="route.js"></script>
+    <script src="service/agendamentoService.js"></script>
+    <script src="service/novoAgendamentoService.js"></script>
+    <script src="controller/novoAgendamentoController.js"></script>
+    <script src="controller/agendamentoController.js"></script>
+    <script src="controller/smartHomeController.js"></script>
+
+
+
+</head>
+<body>
+
+<div class="container">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Smart Home</h1>
+            <p class="lead">Utilize este sistema para agendar o horário de funcionamento dos seus aparelhos eletroeletrônicos.</p>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#!smartHome">SmartHome</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#!agendamentos">Agendamentos <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#!novoAgendamento">Novo Agendamento</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <div ng-view="view" >
+
+    </div>
+</div>
+</body>
+</html>
